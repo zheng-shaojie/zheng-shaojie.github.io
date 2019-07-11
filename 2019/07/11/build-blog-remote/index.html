@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://blog.springzzz.tech">
-  <title>Category: 博客 | 不忘初心</title>
+  <title>记一次个人博客搭建之旅(远程部署) | 不忘初心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="不忘初心">
-<meta property="og:url" content="https://blog.springzzz.tech/categories/博客/index.html">
+  <meta name="description" content="在第一篇博客中已经介绍了如何在本地搭建个人的博客系统,现在我们来介绍一下怎么将本地系统部托管到GitHub上和如何部署到自己的服务器上. 使用Github托管博客　　首先我们需要在自己的GitHub上创建一个新的仓库,若是没有Git账号的请自行申请,打开GitHub新建仓库  注意: 仓库名字一定要以.github.io结尾  　　项目建成后,点击 setting拖动到GitHub Pages">
+<meta name="keywords" content="博客,Nginx,ruby,jekyll,GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次个人博客搭建之旅(远程部署)">
+<meta property="og:url" content="https://blog.springzzz.tech/2019/07/11/build-blog-remote/index.html">
 <meta property="og:site_name" content="不忘初心">
+<meta property="og:description" content="在第一篇博客中已经介绍了如何在本地搭建个人的博客系统,现在我们来介绍一下怎么将本地系统部托管到GitHub上和如何部署到自己的服务器上. 使用Github托管博客　　首先我们需要在自己的GitHub上创建一个新的仓库,若是没有Git账号的请自行申请,打开GitHub新建仓库  注意: 仓库名字一定要以.github.io结尾  　　项目建成后,点击 setting拖动到GitHub Pages">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://blog.springzzz.tech/images/2.png">
+<meta property="og:image" content="https://blog.springzzz.tech/images/3.png">
+<meta property="og:image" content="https://blog.springzzz.tech/images/4.png">
+<meta property="og:updated_time" content="2019-07-11T09:38:17.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不忘初心">
+<meta name="twitter:title" content="记一次个人博客搭建之旅(远程部署)">
+<meta name="twitter:description" content="在第一篇博客中已经介绍了如何在本地搭建个人的博客系统,现在我们来介绍一下怎么将本地系统部托管到GitHub上和如何部署到自己的服务器上. 使用Github托管博客　　首先我们需要在自己的GitHub上创建一个新的仓库,若是没有Git账号的请自行申请,打开GitHub新建仓库  注意: 仓库名字一定要以.github.io结尾  　　项目建成后,点击 setting拖动到GitHub Pages">
+<meta name="twitter:image" content="https://blog.springzzz.tech/images/2.png">
   
     <link rel="alternative" href="/atom.xml" title="不忘初心" type="application/atom+xml">
   
@@ -150,36 +159,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-build-blog-remote" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/build-blog-remote/" class="archive-article-date">
-  	<time datetime="2019-07-11T07:30:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/build-blog-remote/">记一次个人博客搭建之旅(远程部署)</a>
+    <h1 class="article-title" itemprop="name">
+      记一次个人博客搭建之旅(远程部署)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+
+        
+        <a href="/2019/07/11/build-blog-remote/" class="archive-article-date">
+  	<time datetime="2019-07-11T07:30:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+			    阅读量 <span id="busuanzi_value_page_pv"></span>
+		    </span>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　在第一篇博客中已经介绍了如何在本地搭建个人的博客系统,现在我们来介绍一下怎么将本地系统部托管到GitHub上和如何部署到自己的服务器上.</p>
+<h2 id="使用Github托管博客"><a href="#使用Github托管博客" class="headerlink" title="使用Github托管博客"></a>使用Github托管博客</h2><p>　　首先我们需要在自己的GitHub上创建一个新的仓库,若是没有Git账号的请自行申请,打开GitHub新建仓库</p>
+<blockquote>
+<p>注意: 仓库名字一定要以<code>.github.io</code>结尾</p>
+</blockquote>
+<p><img src="/images/2.png" alt="新建仓库"><br>　　项目建成后,点击 <code>setting</code>拖动到<code>GitHub Pages</code>的地方,可以看到如下效果就表示你的域名已经成功发布</p>
+<p><img src="/images/3.png" alt="域名"><br>　　接下来需要配置 <code>GitHub</code>的公钥,这里配置公钥就不详细介绍了,在公钥配置完成后,我们进入到博客的根目录下找到 <code>_config.yml</code>修改配置为:<br>    <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">你自己的仓库地址</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<p>配置完了运行<code>hexo g -d</code>,这里可能会报一个 <code>Deployer not found: git</code>错误,这个是因为我们没有装 <code>hexo-deployer-git</code>插件,通过<code>npm install hexo-deployer-git --save</code>安装,安装成功后再次运行<code>hexo g -d</code>,提示<code>Deploy done: git</code>,接着访问相应的域名<code>https://{你自己的仓库的名字}.github.io/</code>效果如下:</p>
+<p><img src="/images/4.png" alt="效果"><br>看到这个效果说明我们本地的博客已经托管到了 <code>GitHub</code>上面</p>
+<h2 id="使用服务器搭建博客"><a href="#使用服务器搭建博客" class="headerlink" title="使用服务器搭建博客"></a>使用服务器搭建博客</h2><p>　　我的博客系统采用的是<code>Jekyll</code>,服务器是阿里的<code>CentOS 7</code>,因为需要去拉取代码所以还需要安装<code>git</code>,<code>Jekyll</code>需要依赖<code>Node,gcc</code>和<code>Ruby</code>, <code>Node</code>的安装我在中已经介绍过了,这里主要介绍<code>Ruby</code>和<code>Gcc</code>的安装</p>
+<h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><p>　　我在安装<code>Ruby</code>的时候是通过<code>yum</code>的方式安装的,这样安装的<code>Ruby</code>版本太低,所以这里推荐使用<code>rvm</code>来安装<code>Ruby</code><br>首先安装<code>rvm</code>的密钥:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br><span class="line"># 安装rvm</span><br><span class="line">curl -sSL https://get.rvm.io | bash -s stable</span><br><span class="line"></span><br><span class="line"># 立即生效</span><br><span class="line">source ~/.bashrc</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>安装成功后通过<code>rvm list know</code>查看可用的<code>Ruby</code>版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># MRI Rubies</span><br><span class="line">[ruby-]1.8.6[-p420]</span><br><span class="line">[ruby-]1.8.7[-head] # security released on head</span><br><span class="line">[ruby-]1.9.1[-p431]</span><br><span class="line">[ruby-]1.9.2[-p330]</span><br><span class="line">[ruby-]1.9.3[-p551]</span><br><span class="line">[ruby-]2.0.0[-p648]</span><br><span class="line">[ruby-]2.1[.10]</span><br><span class="line">[ruby-]2.2[.10]</span><br><span class="line">[ruby-]2.3[.7]</span><br><span class="line">[ruby-]2.4[.4]</span><br><span class="line">[ruby-]2.5[.1]</span><br><span class="line">[ruby-]2.6[.0-preview2]</span><br><span class="line">ruby-head</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>rvm install 2.5</code>安装一个比2.2高的就行.安装完成后通过<code>ruby -v</code>验证<br>用法: </p>
+<pre><code>- rvm use 2.2.0: 切换ruby版本
+- rvm use 2.2.0 --default: 设置默认版本
+- rvm list: 列出已经安装的ruby版本
+- rvm remove 1.8.7: 删除一个版本</code></pre><h3 id="安装Gcc"><a href="#安装Gcc" class="headerlink" title="安装Gcc"></a>安装Gcc</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 升级gcc</span><br><span class="line">yum -y update gcc</span><br><span class="line">yum -y install gcc-c++</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Jekyll"><a href="#安装Jekyll" class="headerlink" title="安装Jekyll"></a>安装Jekyll</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem install jekyll</span><br><span class="line">jekyll --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h3><p>　　我的<code>Nginx</code>的配置文件是放在<code>/usr/location/nginx/conf</code>,可能你们的路径不太一致,修改<code>nginx.conf</code>文件,添加如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">	listen 443 ssl;</span><br><span class="line">	server_name blog.springzzz.tech;</span><br><span class="line">    root html;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">    ssl_certificate   ../cert/blog.springzzz.tech.pem;</span><br><span class="line">    ssl_certificate_key  ../cert/blog.springzzz.tech.key;</span><br><span class="line">    ssl_session_timeout 5m;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    # root是静态文件的存放地址</span><br><span class="line">    # index是首页</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /root/blog/html;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">    # 这项配置的是自动部署的监听,后面会讲到</span><br><span class="line">    location /incoming &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:3001/incoming;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">    error_page   500 502 503 504  /50x.html;</span><br><span class="line">    location = /50x.html &#123;</span><br><span class="line">        root   /root/blog/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过<code>git clone url</code>拉取代码,<code>cd &lt;folder&gt;</code>到代码目录,执行<code>jekyll build --destination=/root/blog/html</code>编译源码,<code>--destination</code>指定的目录就是你<code>Nginx</code>配置的那个目录,重启<code>Nginx service nginx restart</code>,访问域名</p>
+<h3 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -207,7 +270,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -220,74 +283,148 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://blog.springzzz.tech/2019/07/11/build-blog-remote/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/build-blog/" class="archive-article-date">
-  	<time datetime="2019-07-11T03:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/11/build-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">记一次个人博客搭建之旅(本地部署)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/build-blog/">记一次个人博客搭建之旅(本地部署)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/博客//" class="article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Github托管博客"><span class="toc-number">1.</span> <span class="toc-text">使用Github托管博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用服务器搭建博客"><span class="toc-number">2.</span> <span class="toc-text">使用服务器搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Ruby"><span class="toc-number">2.1.</span> <span class="toc-text">安装Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Gcc"><span class="toc-number">2.2.</span> <span class="toc-text">安装Gcc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Jekyll"><span class="toc-number">2.3.</span> <span class="toc-text">安装Jekyll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Nginx"><span class="toc-number">2.4.</span> <span class="toc-text">配置Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动化部署"><span class="toc-number">2.5.</span> <span class="toc-text">自动化部署</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-  
-    </div></section>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="build-blog-remote" data-title="记一次个人博客搭建之旅(远程部署)" data-url="https://blog.springzzz.tech/2019/07/11/build-blog-remote/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://blog.springzzz.tech/2019/07/11/build-blog-remote/", 
+    sourceId: "build-blog-remote",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -315,10 +452,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
